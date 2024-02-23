@@ -67,7 +67,7 @@ export default {
       // Here you would implement the actual logic for switching languages
     },
     openPdf() {
-      const pdfUrl = process.env.BASE_URL + "demo.pdf";
+      const pdfUrl = process.env.BASE_URL + "menu.pdf";
 
       // Open the PDF in a new tab
       window.open(pdfUrl, "_blank");

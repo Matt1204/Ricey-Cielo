@@ -22,8 +22,7 @@
           sm="5"
           class="image-container"
           :style="{ backgroundImage: getBackgroundImg }"
-        >
-        </b-col>
+        ></b-col>
 
         <!-- Second Column -->
         <b-col cols="12" sm="7" class="timeline-container">
@@ -57,73 +56,73 @@
 
 <script>
 export default {
-  name: "StepSlides",
+  name: 'StepSlides',
   data() {
     return {
       imgData: [
-        require("@/assets/step1.jpg"),
-        require("@/assets/step2.jpg"),
-        require("@/assets/step3.jpg"),
-        require("@/assets/step4.jpg"),
-        require("@/assets/step5.jpg"),
-        require("@/assets/step6.jpg"),
+        require('@/assets/step1.jpg'),
+        require('@/assets/step2.jpg'),
+        require('@/assets/step3.jpg'),
+        require('@/assets/step4.jpg'),
+        require('@/assets/step5.jpg'),
+        require('@/assets/step6.jpg'),
       ],
       timelineData: [
         {
-          title: "Step 1",
-          text: "Begin by delicately separating the quail egg yolk from the egg white and gently placing the yolk into the bubbling soup.",
+          title: 'Step 1',
+          text: 'Carefully separate the quail egg yolk from the white and place the yolk into the boiling soup.',
         },
         {
-          title: "Step 2",
-          text: "Prepare your meats by lightly coating slices of chicken, fish, and beef in beaten egg whites to ensure their tenderness.",
+          title: 'Step 2',
+          text: 'Prepare slices of chicken, fish, and beef by coating them in beaten egg whites to ensure they remain tender.',
         },
         {
-          title: "Step 3",
-          text: "Enhance the flavor profile of the meats by swiftly dipping them a few times into the simmering broth.",
+          title: 'Step 3',
+          text: 'Briefly dip the meats into the simmering broth to enhance their flavors.',
         },
         {
-          title: "Step 4",
-          text: "Once adequately infused, carefully add all the prepared ingredients into the broth, and customize the spice level to your liking by incorporating chili oil.",
+          title: 'Step 4',
+          text: 'Add all prepared ingredients to the broth, adjusting the spice level with chili oil as preferred.',
         },
         {
-          title: "Step 5",
-          text: "Use your chopsticks to gracefully retrieve the rice noodles and submerge them into the flavorful broth.",
+          title: 'Step 5',
+          text: 'Lift the rice noodles with chopsticks and immerse them in the broth to soak up its flavors.',
         },
         {
-          title: "Enjoy",
-          text: "Savor the exquisite flavors as they tantalize your taste buds, and don't forget to appreciate the depth and nourishing richness of the broth.",
+          title: 'Enjoy',
+          text: "Relish the complex flavors, appreciating the broth's depth and richness.",
         },
       ],
       index: 0,
       imageInterval: null,
-    };
+    }
   },
   methods: {
     handleIndexChange(newIndex) {
-      this.index = newIndex;
+      this.index = newIndex
       if (this.imageInterval) {
-        clearInterval(this.imageInterval);
+        clearInterval(this.imageInterval)
       }
     },
     incrementIndex() {
-      this.index = (this.index + 1) % this.imgData.length;
+      this.index = (this.index + 1) % this.imgData.length
     },
   },
   computed: {
     getBackgroundImg() {
-      let currentImg = this.imgData[this.index];
-      return `url(${currentImg})`;
+      let currentImg = this.imgData[this.index]
+      return `url(${currentImg})`
     },
   },
   mounted() {
-    this.imageInterval = setInterval(this.incrementIndex, 4000);
+    this.imageInterval = setInterval(this.incrementIndex, 4000)
   },
   beforeUnmount() {
     if (this.imageInterval) {
-      clearInterval(this.imageInterval);
+      clearInterval(this.imageInterval)
     }
   },
-};
+}
 </script>
 
 <style scoped>
@@ -193,7 +192,7 @@ ul.timeline {
 
 /* Timeline vertical line */
 ul.timeline:before {
-  content: " ";
+  content: ' ';
   background: #fff;
   display: inline-block;
   position: absolute;
@@ -224,7 +223,7 @@ li.timeline-item {
 
 /* Timeline item circle marker */
 li.timeline-item::before {
-  content: " ";
+  content: ' ';
   background: #ddd;
   display: inline-block;
   position: absolute;

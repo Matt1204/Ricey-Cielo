@@ -9,9 +9,9 @@
     </div>
     <router-view />
     <AppFooter />
-    <div v-if="showScrollToTop" class="scroll-to-top" @click="scrollToTop">
+    <!-- <div v-if="showScrollToTop" class="scroll-to-top" @click="scrollToTop">
       <img src="@/assets/up-arrow.png" alt="up-arrow" />
-    </div>
+    </div> -->
   </div>
 </template>
 
