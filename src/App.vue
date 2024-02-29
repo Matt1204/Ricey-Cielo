@@ -69,6 +69,10 @@ export default {
 </script>
 
 <style>
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 #app {
   /* background-color: beige; */
   font-family: 'Noto Sans TC', sans-serif;
