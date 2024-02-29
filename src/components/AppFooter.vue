@@ -60,10 +60,10 @@
             >
               <img src="@/assets/instagram.svg" alt="ins" class="media-icon" />
             </a>
-            <a href="">
+            <a href="https://www.xiaohongshu.com/user/profile/653cae0c0000000030030161?xhsshare=CopyLink&appuid=5be7e715d7af4c0001cb7016&apptime=1708498105">
               <img src="@/assets/xhs.svg" alt="xhs" class="media-icon" />
             </a>
-            <div
+            <!-- <div
               class="wechat-container d-flex justify-content-start align-items-center"
             >
               <img
@@ -72,7 +72,7 @@
                 class="wechat-icon"
               />
               <img src="@/assets/code.jpg" alt="wechat-code" class="code-img" />
-            </div>
+            </div> -->
           </div>
           <div
             class="copyright-container d-flex flex-column justify-content-start align-items-center"
@@ -166,7 +166,7 @@ export default {
 }
 .no-decoration {
   text-decoration: none;
-  color: inherit; /* Inherit the surrounding text color */
+  color: inherit;
 }
 .social-media-container {
   padding-left: 50px;

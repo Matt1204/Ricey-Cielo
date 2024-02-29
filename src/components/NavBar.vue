@@ -52,28 +52,26 @@
 </template>
 
 <script>
-
 export default {
-  
-  name: "NavBar",
+  name: 'NavBar',
   data() {
     return {
-      currentLanguage: "en",
-    };
+      currentLanguage: 'en',
+    }
   },
   methods: {
     toggleLanguage() {
-      this.currentLanguage = this.currentLanguage === "en" ? "zh" : "en";
+      this.currentLanguage = this.currentLanguage === 'en' ? 'zh' : 'en'
       // Here you would implement the actual logic for switching languages
     },
     openPdf() {
-      const pdfUrl = process.env.BASE_URL + "menu.pdf";
+      const pdfUrl = process.env.BASE_URL + 'menu.pdf'
 
       // Open the PDF in a new tab
-      window.open(pdfUrl, "_blank");
+      window.open(pdfUrl, '_blank')
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -83,7 +81,7 @@ export default {
 }
 
 .top-nav::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -98,13 +96,8 @@ export default {
 }
 
 .custom-toggler {
-  border: 2px solid; /* Optional: adds a border */
-  border-radius: 0.3rem; /* Rounded corners */
-}
-
-/* To style the navbar-toggler-icon specifically */
-.navbar-toggler-icon {
-  background-image: url("../assets/hamburger-icon.svg"); /* Change the icon */
+  border: 2px solid;
+  border-radius: 0.3rem;
 }
 
 .custom-row-height {

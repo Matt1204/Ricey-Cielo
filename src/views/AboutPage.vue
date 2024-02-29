@@ -13,31 +13,25 @@
         </p>
         <div class="intro-p-container" data-aos="fade-up">
           <p class="intro-text font-p weight-400">
-            Nestled in Orange County, Xishang Roodle is a culinary treasure,
-            introducing the rare delight of Yunnan Rice Noodle to local
-            enthusiasts. Inspired by the lush landscapes of Yunnan, China, the
-            restaurant's journey began as a shared dream among friends yearning
-            for the flavors of home and a sense of belonging in a vibrant
-            community like Orange County.
+            In the vibrant heart of Orange County, Xishang Roodle emerges as a
+            culinary beacon, introducing the authentic Yunnan Rice Noodle to a
+            diverse audience. This establishment not only offers a unique taste
+            experience but also embodies the rich traditions of Yunnan, China,
+            inviting locals into a world of flavor and heritage.
           </p>
           <p class="intro-text font-p weight-400">
-            Beyond merely serving food, Xishang Roodle serves as a cultural
-            bridge, blending Yunnan's rich culinary heritage with OC's diverse
-            food scene. Despite challenges in sourcing authentic ingredients and
-            adapting to new palates, the founders' passion transformed hurdles
-            into triumphs.
+            The dream behind Xishang Roodle, envisioned by friends far from
+            their homeland, was to recreate the communal and nostalgic essence
+            of their childhood meals. Orange County, with its openness and
+            cultural diversity, provided the perfect canvas for this vision,
+            allowing them to weave the threads of their heritage into the local
+            food scene.
           </p>
           <p class="intro-text font-p weight-400">
-            With the aroma of simmering broth filling the air on opening day,
-            Xishang Roodle welcomed patrons to explore the depths of Yunnan's
-            cuisine. Word quickly spread, turning the restaurant into a
-            gathering place for food lovers and families alike.
-          </p>
-          <p class="intro-text font-p weight-400">
-            More than just a dining spot, Xishang Roodle embodies cultural
-            exchange and tradition, offering a taste of home away from home. In
-            Orange County, it stands as a symbol of community and celebration of
-            global flavors, starting with a humble bowl of Yunnan rice noodle.
+            Xishang Roodle stands as a cultural bridge, transcending mere dining
+            to become a place of connection and tradition. Here, every bowl of
+            rice noodle tells a story, offering patrons not just a meal, but an
+            immersive journey into the heart of Yunnan's culinary legacy.
           </p>
         </div>
       </b-col>
@@ -46,32 +40,40 @@
 
   <b-container fluid class="description-container">
     <b-row class="description-row" align-v="stretch" align-h="center">
-      <b-col cols="12" sm="4" class="image-container" data-aos="fade-right">
-      </b-col>
+      <b-col
+        cols="12"
+        sm="4"
+        class="image-container"
+        data-aos="fade-right"
+      ></b-col>
 
       <b-col cols="12" sm="8" id="description-col-ur">
         <div class="title-container" data-aos="fade-right">
           <img src="../assets/flower2.png" alt="starter" class="title-icon" />
-          <p class="description-title font-title">Lorem ipsum dolor sit amet</p>
+          <p class="description-title font-title">Noodles Across Borders</p>
         </div>
         <p class="description-text font-p weight-400" data-aos="fade-right">
-          consectetur adipiscing elit. Suspendisse consectetur sit amet enim in
-          ullamcorper. Maecenas lectus diam, sollicitudin nec gravida non,
-          lobortis eget ligula. Mauris vitae tortor vestibulum, tincidunt elit
-          quis, pellentesque mi. Mauris velit dolor, elementum nec sem quis,
-          sollicitudin convallis justo. In faucibus, nisl eu dapibus imperdiet,
-          quam dolor egestas sem, nec fringilla purus orci sed orci. Aenean
-          faucibus pharetra nibh sit amet lobortis. Donec tempor aliquam nunc
-          non auctor.
+          The journey to bring authentic Yunnan rice noodles to Orange County
+          was fraught with challenges, from sourcing the right ingredients and
+          mastering traditional techniques to adapting these flavors for new
+          palates. Yet, the founders' unwavering passion and dedication turned
+          these hurdles into opportunities, preserving their rich heritage while
+          introducing it to a new audience.
         </p>
         <p class="description-text font-p weight-400" data-aos="fade-right">
-          Sed ac viverra purus. Proin egestas sem a mollis porta. Praesent
-          blandit sit amet enim et accumsan. In commodo ornare nisi. Aliquam
-          vehicula sapien et semper posuere. Donec eget augue id risus porttitor
-          lacinia. Sed id ex a orci tempus sagittis non nec lorem. In faucibus,
-          nisl eu dapibus imperdiet, quam dolor egestas sem, nec fringilla purus
-          orci sed orci. Aenean faucibus pharetra nibh sit amet lobortis. Donec
-          tempor aliquam nunc non auctor.
+          Opening day was filled with anticipation, the air rich with the aromas
+          of simmering broth, fresh herbs, and spices. Serving the first bowl
+          was more than a culinary act; it was a declaration of love for their
+          roots and an invitation to the community to delve into Yunnan's
+          culinary traditions. Each taste was a celebration of the founders'
+          journey and a bridge between cultures.
+        </p>
+        <p class="description-text font-p weight-400" data-aos="fade-right">
+          Xishang Roodle quickly became a gathering spot for food enthusiasts
+          and families alike, a testament to the community's acceptance and
+          curiosity. It stood as a beacon of cultural exchange and tradition,
+          embodying the founders' dream and showcasing the diversity of global
+          flavors through the humble yet profound bowl of Yunnan rice noodles.
         </p>
       </b-col>
     </b-row>
@@ -80,8 +82,8 @@
 
 <script>
 export default {
-  name: "AboutPage",
-};
+  name: 'AboutPage',
+}
 </script>
 
 <style scoped>
@@ -104,10 +106,10 @@ export default {
 
 .top-background {
   height: 100vh;
-  width: 100%; /* Ensure full width */
-  background-image: url("../assets/background1.jpg"); /* Set background image */
-  background-size: cover; /* Cover the entire div */
-  background-position: 50% -8%; /* Center the background image */
+  width: 100%; 
+  background-image: url('../assets/background1.jpg'); 
+  background-size: cover;
+  background-position: 50% -8%; 
 }
 
 .intro-container {
@@ -115,16 +117,16 @@ export default {
 }
 
 .intro-container::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -20px;
-  width: 100%; /* Cover the entire container */
-  height: 100%; /* Cover the entire container */
+  width: 100%; 
+  height: 100%;
   background-size: 30%;
-  background-image: url("../assets/water-print.png"); /* Path to your watermark image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  opacity: 0.4; /* Adjust opacity to make it look like a watermark */
+  background-image: url('../assets/water-print.png'); 
+  background-repeat: no-repeat;
+  opacity: 0.4; 
 }
 
 .intro-row {
@@ -133,10 +135,10 @@ export default {
   display: flex;
   justify-content: center;
   align-self: center;
-  background-image: url("../assets/intro.jpg"); /* Set background image */
+  background-image: url('../assets/intro.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: no-repeat; 
 }
 
 .intro-col {
@@ -145,7 +147,6 @@ export default {
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px 0; */
 }
 .text-icon {
   display: inline;
@@ -171,10 +172,10 @@ export default {
 }
 
 .image-container {
-  height: inherit; /* Make sure the div takes the full height of its parent */
-  background-image: url("../assets//description.jpg"); /* Adjust the path as necessary */
-  background-size: cover; /* Cover the entire area of the div without stretching the image */
-  background-position: center; /* Center the background image */
+  height: inherit; 
+  background-image: url('../assets//description.jpg'); 
+  background-size: cover;
+  background-position: center; 
 }
 
 .description-container,
@@ -198,7 +199,7 @@ export default {
 }
 
 .description-text {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   color: #fff;
 }
 .title-container {
@@ -212,7 +213,6 @@ export default {
   display: inline;
   width: 50px;
   height: auto;
-  /* filter: grayscale(1); */
 }
 .description-title {
   padding: 0 0 0 10px;

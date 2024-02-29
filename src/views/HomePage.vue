@@ -125,7 +125,7 @@
           <div class="dish-text">
             <p class="dish-title">Magic Sauce & Tofu Rice Noodle (豆花米线)</p>
             <p class="dish-p">
-              it is a traditional dish from Kunming, Yunnan Province, belonging
+              A traditional dish from Kunming, Yunnan Province, belonging
               to the Yunnan cuisine category. The main ingredients of this dish
               include rice noodles and soft tofu, with side ingredients like
               local pickles, pork, and minced chives, offering a spicy and
@@ -147,11 +147,11 @@
             class="dish-intro-pic zoom-in"
           />
           <div class="dish-text">
-            <p class="dish-title">Dish name 3..</p>
+            <p class="dish-title">The Dai-Style Devil Chicken (傣味柠檬鬼鸡)</p>
             <p class="dish-p">
-              . Id semper risus in hendrerit gravida rutrum quisque non. Amet
-              justo donec enim diam vulputate ut pharetra sit. Ullamcorper sit
-              amet risus nullam.
+              A vibrant dish that combines the freshness of shredded chicken
+              with the distinctive flavors of Yunnan, key ingredients include:
+              chicken thigh, and breast, herbs, spices, and fresh lemon.
             </p>
           </div>
         </div>
@@ -159,22 +159,28 @@
     </b-row>
     <b-row>
       <b-col cols="12" class="d-flex justify-content-center">
-        <button type="button" class="menu-btn btn">
-          Menu
-        </button>
+        <button type="button" class="menu-btn btn" @click="openPdf">Menu</button>
       </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script scoped>
-import StepSlides from "@/components/StepSlides.vue";
+import StepSlides from '@/components/StepSlides.vue'
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     StepSlides,
   },
-};
+  methods:{
+    openPdf(){
+      const pdfUrl = process.env.BASE_URL + "menu.pdf";
+
+      // Open the PDF in a new tab
+      window.open(pdfUrl, "_blank");
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -199,14 +205,14 @@ export default {
 }
 
 .intro-container::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -20px;
   width: 100%; /* Cover the entire container */
   height: 100%; /* Cover the entire container */
   background-size: 30%;
-  background-image: url("../assets/water-print.png"); /* Path to your watermark image */
+  background-image: url('../assets/water-print.png'); /* Path to your watermark image */
   background-repeat: no-repeat; /* Do not repeat the image */
   opacity: 0.4; /* Adjust opacity to make it look like a watermark */
 }
@@ -226,7 +232,7 @@ export default {
   display: flex;
   justify-content: center;
   align-self: center;
-  background-image: url("../assets/intro.jpg"); /* Set background image */
+  background-image: url('../assets/intro.jpg'); /* Set background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -258,7 +264,7 @@ export default {
 }
 
 .description-container {
-  background-image: url("../assets/intro.jpg"); /* Set background image */
+  background-image: url('../assets/intro.jpg'); /* Set background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -309,7 +315,7 @@ export default {
 .dish-intro-container {
   padding: 100px 0 50px 0;
 
-  background-image: url("../assets/intro.jpg"); /* Set background image */
+  background-image: url('../assets/intro.jpg'); /* Set background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -359,10 +365,10 @@ export default {
 .menu-btn {
   margin-top: 40px;
   width: 90px;
-  border: #d3ae68 1px;
+  border: 1px solid #d3ae68;
   border-radius: 10px;
   color: #d3ae68;
-
+  font-size: 18px;
 }
 .menu-btn:hover {
   background-color: #d3ae68;
