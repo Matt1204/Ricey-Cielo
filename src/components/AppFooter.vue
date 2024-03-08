@@ -46,9 +46,9 @@
             >
               <img src="@/assets/email.svg" alt="email" class="contact-icon" />
               <a
-                href="mailto:thomasy1108@gmail.com"
+                href="mailto:xsroodle@gmail.com"
                 class="no-decoration contact-info"
-                >thomasy1108@gmail.com</a
+                >xsroodle@gmail.com</a
               >
             </div>
           </div>
@@ -78,7 +78,7 @@
             class="copyright-container d-flex flex-column justify-content-start align-items-center"
           >
             <p class="copyright-upper">
-              Copyright {{ currentYear }} Ricey Cielo.
+              Copyright {{ currentYear }} Xishang Roodle.
             </p>
             <p class="copyright-lower">Developed by Mahabarison.</p>
           </div>
