@@ -9,7 +9,9 @@
           class="map-title-container d-flex justify-content-start align-items-center"
         >
           <img src="@/assets/navigate.svg" alt="nav" class="map-title-icon" />
-          <p class="map-title">3396 S Bristol St Santa Ana, CA 92704</p>
+          <p class="map-title" @click="openMap">
+            3396 S Bristol St Santa Ana, CA 92704
+          </p>
         </div>
         <div class="map-container">
           <MapComponent />
@@ -37,9 +39,9 @@
               class="info-item-container d-flex justify-content-start align-items-center"
             >
               <img src="@/assets/phone.svg" alt="phone" class="contact-icon" />
-              <a href="tel:(714) 760-4331" class="no-decoration contact-info"
-                >(714) 760-4331</a
-              >
+              <a href="tel:(714) 760-4331" class="no-decoration contact-info">
+                (714) 760-4331
+              </a>
             </div>
             <div
               class="info-item-container d-flex justify-content-start align-items-center"
@@ -48,8 +50,9 @@
               <a
                 href="mailto:xsroodle@gmail.com"
                 class="no-decoration contact-info"
-                >xsroodle@gmail.com</a
               >
+                xsroodle@gmail.com
+              </a>
             </div>
           </div>
           <div
@@ -60,7 +63,9 @@
             >
               <img src="@/assets/instagram.svg" alt="ins" class="media-icon" />
             </a>
-            <a href="https://www.xiaohongshu.com/user/profile/653cae0c0000000030030161?xhsshare=CopyLink&appuid=5be7e715d7af4c0001cb7016&apptime=1708498105">
+            <a
+              href="https://www.xiaohongshu.com/user/profile/653cae0c0000000030030161?xhsshare=CopyLink&appuid=5be7e715d7af4c0001cb7016&apptime=1708498105"
+            >
               <img src="@/assets/xhs.svg" alt="xhs" class="media-icon" />
             </a>
             <!-- <div
@@ -89,18 +94,25 @@
 </template>
 
 <script>
-import MapComponent from "./MapComponent.vue";
+import MapComponent from './MapComponent.vue'
 export default {
   components: {
     MapComponent,
   },
-  name: "AppFooter",
-  computed: {
-    currentYear() {
-      return new Date().getFullYear();
+  name: 'AppFooter',
+  methods: {
+    openMap() {
+      const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
+      const url = `https://www.google.com/maps/place/?q=place_id:${placeId}`
+      window.open(url, '_blank')
     },
   },
-};
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -122,6 +134,8 @@ export default {
   display: inline;
   margin-bottom: 0 !important;
   margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
   font-size: 22px;
   color: #2e2e2ed5;
 }
