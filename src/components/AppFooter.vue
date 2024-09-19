@@ -37,8 +37,8 @@
               class="info-item-container d-flex justify-content-start align-items-center"
             >
               <img src="@/assets/phone.svg" alt="phone" class="contact-icon" />
-              <a href="tel:(949) 617-9098" class="no-decoration contact-info"
-                >(949) 617-9098</a
+              <a href="tel:(714) 760-4331" class="no-decoration contact-info"
+                >(714) 760-4331</a
               >
             </div>
             <div
