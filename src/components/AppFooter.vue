@@ -14,7 +14,7 @@
           </p>
         </div>
         <div class="map-container">
-          <MapComponent />
+          <MapComponent @markerClicked="openMap"/>
         </div>
       </b-col>
       <b-col cols="12">

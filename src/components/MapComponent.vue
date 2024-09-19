@@ -5,7 +5,7 @@
     :center="center"
     :zoom="12"
   >
-    <Marker :options="markerOptions" />
+    <Marker :options="markerOptions" @click="markerClicked"/>
   </GoogleMap>
 </template>
 
@@ -26,6 +26,11 @@ export default {
         }
       }
     };
+  },
+  methods: {
+    markerClicked() {
+      this.$emit('markerClicked');
+    },
   },
 };
 </script>
