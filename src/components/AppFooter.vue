@@ -103,7 +103,7 @@ export default {
   methods: {
     openMap() {
       // const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
-      const url = `https://www.google.com/maps/search/?api=1&query=Xishang+Roodle&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
+      const url = `https://www.google.com/maps/search/?api=1&query=33.70202%2C-117.88715&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
       window.open(url)
       // window.location.href = url;
 
