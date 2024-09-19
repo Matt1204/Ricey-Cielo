@@ -104,7 +104,9 @@ export default {
     openMap() {
       const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
       const url = `https://www.google.com/maps/place/?q=place_id:${placeId}`
-      window.open(url, '_blank')
+      window.open(url)
+      // window.location.href = url;
+
     },
   },
   computed: {
