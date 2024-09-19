@@ -101,40 +101,28 @@ export default {
   },
   name: 'AppFooter',
   methods: {
-    // openMap() {
-    //   // const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
-    //   const url = `https://www.google.com/maps/search/?api=1&query=33.70202%2C-117.88715&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
-    //   window.open(url)
-    //   // window.location.href = url;
-    // },
     openMap() {
-      // const address = '1600 Amphitheatre Parkway, Mountain View, CA'; // Replace with the address
       const encodedQuery = encodeURIComponent('Xishang Roodle 喜上')
-      // const encodedPlaceId = encodeURIComponent("Xishang Roodle 喜上");
       const WebURL =
         `https://www.google.com/maps/search/?api=1&query=${encodedQuery}&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
-
       if (this.isIOS()) {
-        // iOS devices: Try Google Maps app first, fall back to browser
-        const iosURL = `comgooglemaps://?q=${encodedQuery}`
+        // iOS devices
+        const iosURL = `comgooglemaps://?q=${encodedQuery}&center=33.702018141454644, -117.88713987228664`
         window.location.href = iosURL;
-        console.log("IOS");
         
         setTimeout(() => {
-          window.location.href = WebURL // Fallback if Google Maps app not installed
-          console.log("IOS Fallback");
+          window.location.href = WebURL // Fallback to web
         }, 500)
       } else if (this.isAndroid()) {
-        // Android devices: Use geo: scheme or intent URL
-        const googleMapsURL = `geo:0,0?q=${encodedQuery}`
-        window.location.href = googleMapsURL
+        // Android devices
+        const androidURL = `geo:33.7020,-117.8871?q=${encodedQuery}`
+        window.location.href = androidURL
         setTimeout(() => {
-          window.location.href = WebURL // Fallback to web if no app
+          window.location.href = WebURL // Fallback to web
         }, 500)
       } else {
-        // For desktop/PC and other platforms, open Google Maps in the browser
+        // Web browser
         window.open(WebURL, '_blank')
-        console.log("PC");
       }
     },
     isIOS() {
