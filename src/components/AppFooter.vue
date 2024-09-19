@@ -14,7 +14,7 @@
           </p>
         </div>
         <div class="map-container">
-          <MapComponent @markerClicked="openMap"/>
+          <MapComponent @markerClicked="openMap" />
         </div>
       </b-col>
       <b-col cols="12">
@@ -101,12 +101,47 @@ export default {
   },
   name: 'AppFooter',
   methods: {
+    // openMap() {
+    //   // const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
+    //   const url = `https://www.google.com/maps/search/?api=1&query=33.70202%2C-117.88715&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
+    //   window.open(url)
+    //   // window.location.href = url;
+    // },
     openMap() {
-      // const placeId = 'ChIJOc51qTXf3IAR7vHiVCcx7tQ'
-      const url = `https://www.google.com/maps/search/?api=1&query=33.70202%2C-117.88715&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
-      window.open(url)
-      // window.location.href = url;
+      // const address = '1600 Amphitheatre Parkway, Mountain View, CA'; // Replace with the address
+      const encodedQuery = encodeURIComponent('Xishang Roodle 喜上')
+      // const encodedPlaceId = encodeURIComponent("Xishang Roodle 喜上");
+      const WebURL =
+        `https://www.google.com/maps/search/?api=1&query=${encodedQuery}&query_place_id=ChIJOc51qTXf3IAR7vHiVCcx7tQ`
 
+      if (this.isIOS()) {
+        // iOS devices: Try Google Maps app first, fall back to browser
+        const iosURL = `comgooglemaps://?q=${encodedQuery}`
+        window.location.href = iosURL;
+        console.log("IOS");
+        
+        setTimeout(() => {
+          window.location.href = WebURL // Fallback if Google Maps app not installed
+          console.log("IOS Fallback");
+        }, 500)
+      } else if (this.isAndroid()) {
+        // Android devices: Use geo: scheme or intent URL
+        const googleMapsURL = `geo:0,0?q=${encodedQuery}`
+        window.location.href = googleMapsURL
+        setTimeout(() => {
+          window.location.href = WebURL // Fallback to web if no app
+        }, 500)
+      } else {
+        // For desktop/PC and other platforms, open Google Maps in the browser
+        window.open(WebURL, '_blank')
+        console.log("PC");
+      }
+    },
+    isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+    },
+    isAndroid() {
+      return /Android/.test(navigator.userAgent)
     },
   },
   computed: {
